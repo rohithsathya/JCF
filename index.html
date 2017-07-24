@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="stack.js"></script>
+    <script>
+        var myStack = new jsStack();
+        function stackPush() {
+            var dataToPush = document.getElementById("txtValue").value;
+            myStack.push(dataToPush);
+            alert("Push success");
+        }
+        function stackPop() {
+            myStack.pop();
+            alert("pop success");
+        }
+        function printStack() {
+            for (var i = 0; i < myStack.length; i++) {
+                console.log(myStack[i]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Stack In JS</h3>
+    <input type="text" id="txtValue">
+    <button onclick="stackPush()">Stack Push</button>
+    <button onclick="stackPop()">Stack Pop</button>
+    <button onclick="printStack()">Print Stack</button>
+
+</body>
+
+</html>
