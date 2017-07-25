@@ -2,7 +2,10 @@
 
 <head>
     <script src="stack.js"></script>
+    <script src="queue.js"></script>
+    <script src="linkedList.js"></script>
     <script>
+        //Stack Test
         var myStack = new jsStack();
         function stackPush() {
             var dataToPush = document.getElementById("txtValue").value;
@@ -18,15 +21,56 @@
                 console.log(myStack[i]);
             }
         }
+        //Queue Test
+        var myQueue = new JSQueue();
+        function addToQueue(){
+             var dataToPush = document.getElementById("txtValue").value;
+            myQueue.add(dataToPush);
+        }
+        function removeFromQueue(){
+            myQueue.remove();
+        }
+        function printQueue() {
+            for (var i = 0; i < myQueue.length; i++) {
+                console.log(myQueue[i]);
+            }
+        }
+        //linkedlist test
+        var myLL = new JSLinkedList();
+        function addToLL(){
+             var dataToPush = document.getElementById("txtValue").value;
+             myLL.add(dataToPush);
+        }
+        function removeFromLL(){
+             var position = document.getElementById("txtValue").value;
+             myLL.removeAt(position);
+        }
+        function printLL(){
+            for(var i=0;i<myLL.length;i++){
+                console.log(myLL.itemAt(i));
+            }
+        }
+
     </script>
 </head>
 
 <body>
-    <h3>Stack In JS</h3>
+    
     <input type="text" id="txtValue">
+    <h3>Stack In JS</h3>
     <button onclick="stackPush()">Stack Push</button>
     <button onclick="stackPop()">Stack Pop</button>
     <button onclick="printStack()">Print Stack</button>
+
+    <h3>Queue In JS</h3>
+     <button onclick="addToQueue()">Queue Add</button>
+    <button onclick="removeFromQueue()">Queue remove</button>
+    <button onclick="printQueue()">Print Queue</button>
+
+     <h3>LinkedList In JS</h3>
+     <button onclick="addToLL()">LinkedList Add</button>
+    <button onclick="removeFromLL()">LinkedList remove</button>
+    <button onclick="printLL()">Print LinkedList</button>
 
 </body>
 
