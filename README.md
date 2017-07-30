@@ -7,7 +7,7 @@ provides the basic javascript implementation of commonly used data structures.It
 * [Graph](#graph)
 
 ## Demo
- [LIVE DEMO](https://rohithsathya.github.io/JSD/index.html)
+ [LIVE DEMO](https://rohithsathya.github.io/JCF/Examples/index.html)
 
 ### Get started
 This library is been bulit to use on both server side (nodeJs) as well as on client (Html/JS).
@@ -16,7 +16,7 @@ This library is been bulit to use on both server side (nodeJs) as well as on cli
     npm install js-collections-framework
 ```
 
-* or [download](https://github.com/rohithsathya/JSD/archive/master.zip) the project and refer the JCF file present in the dist/ folder
+* or [download](https://github.com/rohithsathya/JCF/archive/master.zip) the project and refer the JCF file present in the dist/ folder
 ```html
     <script src="./dist/JCF.min.js"></script>
 ```
@@ -49,7 +49,7 @@ In computer science, a stack is an abstract data type that serves as a collectio
 ```html
     <html>
     <head>
-        <script src="https://rohithsathya.github.io/JSD/dist/JCF.min.js"></script>
+        <script src="https://rohithsathya.github.io/JCF/dist/JCF.min.js"></script>
         <script>
              var stack = JCF.Stack;
              var myStack = new stack();
@@ -112,7 +112,7 @@ Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, 
 ```html
     <html>
     <head>
-        <script src="https://rohithsathya.github.io/JSD/dist/JCF.min.js"></script>
+        <script src="https://rohithsathya.github.io/JCF/dist/JCF.min.js"></script>
         <script>
              var queue = JCF.Queue;
              var myQueue = new queue();
@@ -186,7 +186,7 @@ Linked List is a sequence of links which contains items. Each link contains a co
 ```html
    <html>
     <head>
-        <script src="https://rohithsathya.github.io/JSD/dist/JCF.min.js"></script>
+        <script src="https://rohithsathya.github.io/JCF/dist/JCF.min.js"></script>
         <script>
              var linkedList = JCF.LinkedList;
              var myLinkedList = new linkedList();
@@ -280,7 +280,7 @@ In computer science, a tree is a widely used abstract data type (ADT)—or data 
 ```html
   <html>
     <head>
-        <script src="https://rohithsathya.github.io/JSD/dist/JCF.min.js"></script>
+        <script src="https://rohithsathya.github.io/JCF/dist/JCF.min.js"></script>
         <script>
              var treeNode = JCF.Tree;
 
@@ -346,6 +346,7 @@ Formally, a graph is a pair of sets (V, E), where V is the set of vertices and E
         var graph = JCF.Graph;
 
         var myGraph = new graph();
+        var nodeA = new graphNode("A");
 
 ```
 * On Client Side(HTML/JS)
@@ -355,7 +356,7 @@ Formally, a graph is a pair of sets (V, E), where V is the set of vertices and E
         var graph = JCF.Graph;
 
         var myGraph = new graph();
-        var nodeA = new JSDNode("A");
+        var nodeA = new graphNode("A");
 ``` 
 ### Methods/Operations on stack
 | Method       | Explanation  | Example  |
@@ -379,7 +380,7 @@ Formally, a graph is a pair of sets (V, E), where V is the set of vertices and E
   <html>
 
 <head>
-    <script src="https://rohithsathya.github.io/JSD/dist/JCF.min.js"></script>
+    <script src="https://rohithsathya.github.io/JCF/dist/JCF.min.js"></script>
     <script>
         var graphNode = JCF.GraphNode;
         var graph = JCF.Graph;
