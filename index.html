@@ -1,12 +1,19 @@
 <html>
 
 <head>
-    <script src="stack.js"></script>
-    <script src="queue.js"></script>
+     <script src="./dist/JCF.min.js"></script> 
+    <!-- <script src="stack.js"></script>
+     <script src="queue.js"></script>
     <script src="linkedList.js"></script>
+    <script src="tree.js"></script>
+    <script src="Graph.js"></script>  -->
     <script>
         //Stack Test
-        var myStack = new jsStack();
+        var stackG = JCF.Stack;
+        var JSQueue = JCF.Queue;
+        
+
+        var myStack = new stackG();
         function stackPush() {
             var dataToPush = document.getElementById("txtValue").value;
             myStack.push(dataToPush);
@@ -21,13 +28,16 @@
                 console.log(myStack[i]);
             }
         }
+
+
+        //return;
         //Queue Test
         var myQueue = new JSQueue();
-        function addToQueue(){
-             var dataToPush = document.getElementById("txtValue").value;
+        function addToQueue() {
+            var dataToPush = document.getElementById("txtValue").value;
             myQueue.add(dataToPush);
         }
-        function removeFromQueue(){
+        function removeFromQueue() {
             myQueue.remove();
         }
         function printQueue() {
@@ -35,40 +45,199 @@
                 console.log(myQueue[i]);
             }
         }
-        //linkedlist test
+    </script>
+    <!--linkedlist test-->
+    <script>
         var myLL = new JSLinkedList();
-        function addToLL(){
-             var dataToPush = document.getElementById("txtValue").value;
-             myLL.add(dataToPush);
+        function addAtStart(data) {
+            //var data = document.getElementById("txtValue").value;
+            myLL.addAtStart(data);
         }
-        function removeFromLL(){
-             var position = document.getElementById("txtValue").value;
-             myLL.removeAt(position);
+        function addAtLL(data, pos) {
+            //var data = document.getElementById("txtValue").value;
+            //var pos = document.getElementById("posValue").value;
+            myLL.addAt(data, pos);
         }
-        function printLL(){
-            for(var i=0;i<myLL.length;i++){
+        function addAtEnd(data) {
+            //var data = document.getElementById("txtValue").value;
+            myLL.addAtEnd(data);
+        }
+        function getHeadLL() {
+            console.log("Linkde List Head");
+            console.log(myLL.getHead());
+        }
+        function getTailLL() {
+            console.log("Linkde List Tail");
+            console.log(myLL.getTail());
+        }
+        function itemAtLL(pos) {
+            //var pos = document.getElementById("posValue").value;
+            console.log("Item at : " + pos);
+            console.log(myLL.itemAt(pos));
+        }
+        function printLL() {
+            for (var i = 0; i < myLL.length; i++) {
                 console.log(myLL.itemAt(i));
             }
         }
+
+        function removeFromLL(pos) {
+            //var pos = document.getElementById("posValue").value;
+            myLL.removeAt(pos);
+        }
+        function removeHeadFromLL() {
+            myLL.removeHead();
+
+        }
+        function removeTailFromLL() {
+            myLL.removeTail();
+        }
+
+
+
+        //add Data to LL
+        addAtStart("1");
+        addAtStart("2");
+        addAtStart("3");
+        console.log("prinitng...it should print 3,2,1");
+        printLL();
+        addAtEnd("4");
+        console.log("prinitng...it should print 3,2,1,4");
+        printLL();
+        addAtLL("5", 2);
+        console.log("prinitng...it should print 3,2,5,1,4");
+        printLL();
+
+        getHeadLL();
+        getTailLL();
+        itemAtLL(2);
+
+        console.log("removing pos 3");
+        removeFromLL(3);
+        console.log("prinitng...it should print 3,2,5,4");
+        printLL();
+
+        console.log("removing head");
+        removeHeadFromLL();
+        console.log("prinitng...it should print 2,5,4");
+        printLL();
+
+        console.log("removing Tail");
+        removeTailFromLL();
+        console.log("prinitng...it should print 2,5");
+        printLL();
+    </script>
+    <!--tree test  -->
+    <script>
+        var rootNode = new treeNode("CEO");
+
+        var engNode = new treeNode("ENG");
+        var manNode = new treeNode("MAN");
+        var opsNode = new treeNode("OPS");
+
+
+        var emp1Node = new treeNode("emp1");
+        var emp2Node = new treeNode("emp2");
+        var emp3Node = new treeNode("emp3");
+        var emp4Node = new treeNode("emp4");
+        var emp5Node = new treeNode("emp5");
+        var emp6Node = new treeNode("emp6");
+
+        //now create a tree
+        rootNode.addChild(engNode);
+        rootNode.addChild(manNode);
+        rootNode.addChild(opsNode);
+
+        engNode.addChild(emp1Node);
+        engNode.addChild(emp2Node);
+        manNode.addChild(emp3Node);
+        manNode.addChild(emp4Node);
+        opsNode.addChild(emp5Node);
+        opsNode.addChild(emp6Node);
+
+        console.log("\n=====================TREE=====================\n");
+        console.log("Printing Tree");
+        console.log(rootNode.toJson());
+        console.log("Printing root");
+        console.log(emp1Node.getRoot());
+        console.log("printing parent of emp3, it should be MAN");
+        console.log(emp3Node.getParent());
+        console.log("Prinitng children of ENG, should be emp1 and 2");
+        console.log(engNode.getChildren());
+        console.log("Prinitng the value of OPS dept, it should be OPS");
+        console.log(opsNode.getValue());
+        console.log("Deleting the OPS node");
+        opsNode.delete();
+        console.log(emp1Node.getRoot());
+    </script>
+    <!--graph test  -->
+    <script>
+        var nodeA = new JSDNode("A");
+        var nodeB = new JSDNode("B");
+        var nodeC = new JSDNode("C");
+        var nodeD = new JSDNode("D");
+
+        var myGraph = new JSDGraph();
+        myGraph.addVertex(nodeA);
+        myGraph.addVertex(nodeB);
+        myGraph.addVertex(nodeC);
+        myGraph.addVertex(nodeD);
+
+        myGraph.addEdge(nodeA,nodeB);
+        myGraph.addEdge(nodeA,nodeC);
+        myGraph.addEdge(nodeA,nodeD);
+        myGraph.addEdge(nodeB,nodeD);
+
+        console.log("\n============GRAPH===================\n");
+        console.log("Prinitng all vertices");
+        console.log(myGraph.getAllVertices())
+        console.log("Prinitng Neigbhours of nodeA, this should be B,C,D");
+        console.log(myGraph.getAdjacentVertices(nodeA));
+        console.log("Prinitng outdegree of A, it should be 3");
+        console.log(myGraph.getOutdegree(nodeA));
+        console.log("Prinitng indegree of B, it should be 1");
+        console.log(myGraph.getIndegree(nodeB));
+        console.log("Prinitng the graph in JSON");
+        console.log(myGraph.toJson());
+        console.log("DFS startting with nodeB");
+        console.log(myGraph.dfs(nodeB));
+        console.log("BFS startting with nodeA");
+        console.log(myGraph.dfs(nodeA));
+        console.log("remove Edge between a and b");
+        myGraph.removeEdge(nodeA,nodeB);
+        console.log("Prinitng outdegree of A, it should be 2");
+        console.log(myGraph.getAdjacentVertices(nodeA));
+        console.log("Removing vertex nodeB");
+        myGraph.removeVertex(nodeB);
+        console.log("Prinitng the graph in JSON");
+        console.log(myGraph.toJson());
+
+
+
+
+
+
+
 
     </script>
 </head>
 
 <body>
-    
+
     <input type="text" id="txtValue">
+    <input type="number" min="0" max="100" value="0" id="posValue" placeholder="position" />
     <h3>Stack In JS</h3>
     <button onclick="stackPush()">Stack Push</button>
     <button onclick="stackPop()">Stack Pop</button>
     <button onclick="printStack()">Print Stack</button>
 
     <h3>Queue In JS</h3>
-     <button onclick="addToQueue()">Queue Add</button>
+    <button onclick="addToQueue()">Queue Add</button>
     <button onclick="removeFromQueue()">Queue remove</button>
     <button onclick="printQueue()">Print Queue</button>
 
-     <h3>LinkedList In JS</h3>
-     <button onclick="addToLL()">LinkedList Add</button>
+    <h3>LinkedList In JS</h3>
+    <button onclick="addToLL()">LinkedList Add</button>
     <button onclick="removeFromLL()">LinkedList remove</button>
     <button onclick="printLL()">Print LinkedList</button>
 

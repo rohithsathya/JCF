@@ -1,0 +1,35 @@
+{
+  "name": "js-collections-framework",
+  "version": "0.0.1",
+  "description": "collections framework for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohithsathya/JSD.git"
+  },
+  "keywords": [
+    "collections",
+    "javascript",
+    "stack",
+    "queue",
+    "graph",
+    "linkedlist",
+    "list",
+    "linked",
+    "tree"
+  ],
+  "author": "Rohith Sathyanarayana <getrohith.sathya@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohithsathya/JSD/issues"
+  },
+  "homepage": "https://github.com/rohithsathya/JSD#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^1.0.0"
+  }
+}

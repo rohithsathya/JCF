@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="../dist/JCF.min.js"></script>
+        <script>
+             var stack = JCF.Stack;
+             var myStack = new stack();
+             //push Data
+             myStack.push("1");
+             myStack.push("2");
+             myStack.push("3");
+
+             //print the stack data
+             console.log("Printing Stack");
+              for (var i = 0; i < myStack.length; i++) {
+                console.log(myStack[i]);
+            }
+
+            //pop data
+            myStack.pop();
+
+             //print the stack data
+             console.log("Printing Stack");
+              for (var i = 0; i < myStack.length; i++) {
+                console.log(myStack[i]);
+            }
+
+        </script>
+    </head>
+    <body>
+        <h3>
+            Look at the developer console for output
+        </h3>
+    </body>
+</html>

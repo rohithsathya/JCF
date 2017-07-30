@@ -1,4 +1,4 @@
-//Queue FsIFO
+//Queue FIFO
 function JSQueue(){
     this._index = -1;
     this.length = 0;
@@ -29,4 +29,15 @@ JSQueue.prototype.remove = function(){
 }
 JSQueue.prototype.peek = function(){
     return this[0];
+}
+
+//applicable only for nodejs/npm
+if (typeof module != 'undefined' && module != null) {
+     module.exports = JSQueue;
+}else{
+    //for client side export
+    if (typeof JCF === 'undefined' || JCF == null) {
+        JCF = {}
+    }
+    JCF.Queue = JSQueue;
 }

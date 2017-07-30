@@ -22,3 +22,16 @@ jsStack.prototype.pop = function () {
         console.warn("nothing to pop")
     }
 }
+
+
+//applicable only for nodejs/npm
+if (typeof module != 'undefined' && module != null) {
+    module.exports = jsStack;
+} else {
+    //for client side export
+    if (typeof JCF === 'undefined' || JCF == null) {
+        JCF = {}
+    }
+    JCF.Stack = jsStack;
+}
+
