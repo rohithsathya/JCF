@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="../dist/JCF.min.js"></script>
+        <script>
+             var queue = JCF.Queue;
+             var myQueue = new queue();
+             //push Data
+             myQueue.add("1");
+             myQueue.add("2");
+             myQueue.add("3");
+
+             //print the stack data
+             console.log("Printing Queue");
+              for (var i = 0; i < myQueue.length; i++) {
+                console.log(myQueue[i]);
+            }
+
+            //pop data
+            myQueue.remove();
+
+             //print the stack data
+             console.log("Printing Queue");
+              for (var i = 0; i < myQueue.length; i++) {
+                console.log(myQueue[i]);
+            }
+
+            //peaking Queue
+            console.log("Peaking Queue")
+            console.log(myQueue.peek());
+
+        </script>
+    </head>
+    <body>
+        <h3>
+            Look at the developer console for output
+        </h3>
+    </body>
+</html>

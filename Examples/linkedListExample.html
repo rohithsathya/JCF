@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="../dist/JCF.min.js"></script>
+        <script>
+             var linkedList = JCF.LinkedList;
+             var myLinkedList = new linkedList();
+
+        //add Data to LL
+        console.log("Adding 1,2,3 to linked list");
+        myLinkedList.addAtStart("1");
+        myLinkedList.addAtStart("2");
+        myLinkedList.addAtStart("3");
+        console.log("prinitng...it should print 3,2,1");
+        prinitLinkedList();
+        myLinkedList.addAtEnd("4");
+        console.log("prinitng...it should print 3,2,1,4");
+        prinitLinkedList();
+        myLinkedList.addAt("5", 2);
+        console.log("prinitng...it should print 3,2,5,1,4");
+        prinitLinkedList();
+
+        console.log("Getting Head Node");
+        console.log(myLinkedList.getHead());
+
+        console.log("Getting Tail Node");
+        console.log( myLinkedList.getTail());
+
+        console.log("Getting Node At Position 2");
+        console.log(myLinkedList.itemAt(2));
+        
+
+        console.log("Removing Node At Position 3");
+        myLinkedList.removeAt(3);
+        console.log("prinitng...it should print 3,2,5,4");
+        prinitLinkedList();
+
+        console.log("Removing Head Node");
+        myLinkedList.removeHead();
+        console.log("prinitng...it should print 2,5,4");
+        prinitLinkedList();
+
+        console.log("Removing Tail Node");
+        myLinkedList.removeTail();
+        console.log("prinitng...it should print 2,5");
+        prinitLinkedList();
+
+        function prinitLinkedList(){
+            for (var i = 0; i < myLinkedList.length; i++) {
+                console.log(myLinkedList.itemAt(i));
+            }
+        }
+           
+
+        </script>
+    </head>
+    <body>
+        <h3>
+            Look at the developer console for output
+        </h3>
+    </body>
+</html>

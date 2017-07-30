@@ -7,7 +7,7 @@ var JSDNode = require('./Graph.js').node;
 
 module.exports.Stack = stack;
 module.exports.Queue = queue;
-module.exports.LinkdeList = linkedList;
+module.exports.LinkedList = linkedList;
 module.exports.Tree = tree;
 module.exports.Graph = JSDGraph;
 module.exports.GraphNode = JSDNode;

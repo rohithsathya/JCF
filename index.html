@@ -11,7 +11,7 @@
         //Stack Test
         var stackG = JCF.Stack;
         var JSQueue = JCF.Queue;
-        
+
 
         var myStack = new stackG();
         function stackPush() {
@@ -49,6 +49,7 @@
     <!--linkedlist test-->
     <script>
         var myLL = new JSLinkedList();
+
         function addAtStart(data) {
             //var data = document.getElementById("txtValue").value;
             myLL.addAtStart(data);
@@ -62,6 +63,7 @@
             //var data = document.getElementById("txtValue").value;
             myLL.addAtEnd(data);
         }
+        
         function getHeadLL() {
             console.log("Linkde List Head");
             console.log(myLL.getHead());
@@ -75,6 +77,8 @@
             console.log("Item at : " + pos);
             console.log(myLL.itemAt(pos));
         }
+
+
         function printLL() {
             for (var i = 0; i < myLL.length; i++) {
                 console.log(myLL.itemAt(i));

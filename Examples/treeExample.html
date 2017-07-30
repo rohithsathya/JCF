@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script src="../dist/JCF.min.js"></script>
+        <script>
+             var treeNode = JCF.Tree;
+
+        var rootNode = new treeNode("CEO");
+        var engNode = new treeNode("ENG");
+        var manNode = new treeNode("MAN");
+        var opsNode = new treeNode("OPS");
+
+
+        var emp1Node = new treeNode("emp1");
+        var emp2Node = new treeNode("emp2");
+        var emp3Node = new treeNode("emp3");
+        var emp4Node = new treeNode("emp4");
+        var emp5Node = new treeNode("emp5");
+        var emp6Node = new treeNode("emp6");
+
+        //now create a tree
+        rootNode.addChild(engNode);
+        rootNode.addChild(manNode);
+        rootNode.addChild(opsNode);
+
+        engNode.addChild(emp1Node);
+        engNode.addChild(emp2Node);
+        manNode.addChild(emp3Node);
+        manNode.addChild(emp4Node);
+        opsNode.addChild(emp5Node);
+        opsNode.addChild(emp6Node);
+
+        console.log("\n=====================TREE=====================\n");
+        console.log("Printing Tree");
+        console.log(rootNode.toJson());
+        console.log("Printing root");
+        console.log(emp1Node.getRoot());
+        console.log("printing parent of emp3, it should be MAN");
+        console.log(emp3Node.getParent());
+        console.log("Prinitng children of ENG, should be emp1 and 2");
+        console.log(engNode.getChildren());
+        console.log("Prinitng the value of OPS dept, it should be OPS");
+        console.log(opsNode.getValue());
+        console.log("Deleting the OPS node");
+        opsNode.delete();
+        console.log(emp1Node.getRoot());
+        </script>
+    </head>
+    <body>
+        <h3>
+            Look at the developer console for output
+        </h3>
+    </body>
+</html>

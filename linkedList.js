@@ -156,5 +156,5 @@ if (typeof module != 'undefined' && module != null) {
     if (typeof JCF === 'undefined' || JCF == null) {
         JCF = {}
     }
-    JCF.LinkdeList = JSLinkedList;
+    JCF.LinkedList = JSLinkedList;
 }

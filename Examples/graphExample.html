@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script src="../dist/JCF.min.js"></script>
+    <script>
+        var graphNode = JCF.GraphNode;
+        var graph = JCF.Graph;
+
+        var myGraph = new graph();
+        var nodeA = new graphNode("A");
+        var nodeB = new graphNode("B");
+        var nodeC = new graphNode("C");
+        var nodeD = new graphNode("D");
+
+
+        myGraph.addVertex(nodeA);
+        myGraph.addVertex(nodeB);
+        myGraph.addVertex(nodeC);
+        myGraph.addVertex(nodeD);
+
+        myGraph.addEdge(nodeA, nodeB);
+        myGraph.addEdge(nodeA, nodeC);
+        myGraph.addEdge(nodeA, nodeD);
+        myGraph.addEdge(nodeB, nodeD);
+
+        console.log("\n============GRAPH===================\n");
+        console.log("Prinitng all vertices");
+        console.log(myGraph.getAllVertices())
+        console.log("Prinitng Neigbhours of nodeA, this should be B,C,D");
+        console.log(myGraph.getAdjacentVertices(nodeA));
+        console.log("Prinitng outdegree of A, it should be 3");
+        console.log(myGraph.getOutdegree(nodeA));
+        console.log("Prinitng indegree of B, it should be 1");
+        console.log(myGraph.getIndegree(nodeB));
+        console.log("Prinitng the graph in JSON");
+        console.log(myGraph.toJson());
+        console.log("DFS startting with nodeB");
+        console.log(myGraph.dfs(nodeB));
+        console.log("BFS startting with nodeA");
+        console.log(myGraph.dfs(nodeA));
+        console.log("remove Edge between a and b");
+        myGraph.removeEdge(nodeA, nodeB);
+        console.log("Prinitng outdegree of A, it should be 2");
+        console.log(myGraph.getAdjacentVertices(nodeA));
+        console.log("Removing vertex nodeB");
+        myGraph.removeVertex(nodeB);
+        console.log("Prinitng the graph in JSON");
+        console.log(myGraph.toJson());
+    </script>
+</head>
+
+<body>
+    <h3>
+        Look at the developer console for output
+    </h3>
+</body>
+
+</html>
