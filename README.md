@@ -1,10 +1,10 @@
 # js-collections-framework
 provides the basic javascript implementation of commonly used data structures.It includes following data structres 
-* Stack
-* Queue
-* LinkedList
-* Tree
-* Graph
+* [Stack](#stack)
+* [Queue](#queue)
+* [LinkedList](#inked-list)
+* [Tree](#tree)
+* [Graph](#graph)
 
 ## Demo
  [LIVE DEMO](https://rohithsathya.github.io/JSD/index.html)
@@ -86,7 +86,7 @@ In computer science, a stack is an abstract data type that serves as a collectio
 ## Queue
 Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
 
-### How to use stack in JCF
+### How to use queue in JCF
 * In nodeJS
 ```js
         var JCF = require('js-collections-framework');
@@ -155,7 +155,7 @@ Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, 
 A linked list is a sequence of data structures, which are connected together via links.
 Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second most-used data structure after array.
 
-### How to use stack in JCF
+### How to use linkedlist in JCF
 * In nodeJS
 ```js
         var JCF = require('js-collections-framework');
