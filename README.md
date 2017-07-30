@@ -1,10 +1,10 @@
 # js-collections-framework
 provides the basic javascript implementation of commonly used data structures.It includes following data structres 
-    * Stack
-    * Queue
-    * LinkedList
-    * Tree
-    * Graph
+* Stack
+* Queue
+* LinkedList
+* Tree
+* Graph
 
 ## Demo
  [LIVE DEMO](https://rohithsathya.github.io/JSD/index.html)
@@ -12,31 +12,31 @@ provides the basic javascript implementation of commonly used data structures.It
 ### Get started
     This library is been bulit to use on both server side (nodeJs) as well as on client (Html/JS).
     install it using npm
-    ```js
+```js
         npm install js-collections-framework
-    ```
+```
 
     or [download](https://github.com/rohithsathya/JSD/archive/master.zip) the project and refer the JCF file present in the dist/ folder
-    ```html
+```html
         <script src="./dist/JCF.min.js"></script>
-    ```
+```
 
 ## Stack
 In computer science, a stack is an abstract data type that serves as a collection of elements, with two principal operations: push, which adds an element to the collection, and pop, which removes the most recently added element that was not yet removed. The order in which elements come off a stack gives rise to its alternative name, LIFO (for last in, first out). Additionally, a peek operation may give access to the top without modifying the stack.
 
 ### How to use stack in JCF
-    * In nodeJS
-    ```js
+* In nodeJS
+```js
         var JCF = require('js-collections-framework');
         var stack = JCF.Stack;
         var myStack = new stack();
-    ```
-    * On Client Side(HTML/JS)
-    ```js
+```
+* On Client Side(HTML/JS)
+```js
         //JCF is a global variable and will be available as soon as JCF lib is included
         var stack = JCF.Stack;
         var myStack = new stack();
-    ``` 
+``` 
 ### Methods/Operations on stack
 | Method       | Explanation  | Example  |
 | ------------- | ------------- |------------- |
@@ -83,5 +83,6 @@ In computer science, a stack is an abstract data type that serves as a collectio
 </html>
 
 ```
+
 
 
