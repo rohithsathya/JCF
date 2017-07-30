@@ -1,14 +1,14 @@
 {
   "name": "js-collections-framework",
   "version": "0.0.2",
-  "description": "collections framework for javascript",
+  "description": "Javascript implementation of commonly used data structures like stack, tree, graph..",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rohithsathya/JSD.git"
+    "url": "git+https://github.com/rohithsathya/JCF.git"
   },
   "keywords": [
     "collections",
@@ -24,9 +24,9 @@
   "author": "Rohith Sathyanarayana <getrohith.sathya@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rohithsathya/JSD/issues"
+    "url": "https://github.com/rohithsathya/JCF/issues"
   },
-  "homepage": "https://github.com/rohithsathya/JSD#readme",
+  "homepage": "https://github.com/rohithsathya/JCF#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
