@@ -1,6 +1,6 @@
 {
   "name": "js-collections-framework",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "collections framework for javascript",
   "main": "index.js",
   "scripts": {
